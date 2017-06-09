@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vbadbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="delivery">
+    <Key>
+      <PropertyRef Name="iddeliveryId" />
+    </Key>
+    <Property Name="iddeliveryId" Type="int" Nullable="false" />
+    <Property Name="deliverycol" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="deliveryDate" Type="datetime" Precision="0" />
+    <Property Name="deliveryDate2" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="deliverycol1" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="deliverycol2" Type="varchar" MaxLength="45" />
+    <Property Name="deliverycol3" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="deliveryparts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="iddeliveryId" Type="int" />
+    <Property Name="deliverypartName" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="bigint" Nullable="false" />
+    <Property Name="EmpName" Type="varchar" MaxLength="200" />
+    <Property Name="EmpAddress" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="deliveryparts_ibfk_1">
+    <End Role="delivery" Type="Self.delivery" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="deliveryparts" Type="Self.deliveryparts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="delivery">
+        <PropertyRef Name="iddeliveryId" />
+      </Principal>
+      <Dependent Role="deliveryparts">
+        <PropertyRef Name="iddeliveryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="vbadbModelStoreContainer">
+    <EntitySet Name="delivery" EntityType="Self.delivery" Schema="vbadb" store:Type="Tables" />
+    <EntitySet Name="deliveryparts" EntityType="Self.deliveryparts" Schema="vbadb" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="vbadb" store:Type="Tables" />
+    <AssociationSet Name="deliveryparts_ibfk_1" Association="Self.deliveryparts_ibfk_1">
+      <End Role="delivery" EntitySet="delivery" />
+      <End Role="deliveryparts" EntitySet="deliveryparts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

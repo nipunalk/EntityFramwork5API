@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vbadbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="delivery">
+    <Key>
+      <PropertyRef Name="iddeliveryId" />
+    </Key>
+    <Property Name="iddeliveryId" Type="Int32" Nullable="false" />
+    <Property Name="deliverycol" Type="String" Nullable="false" />
+    <Property Name="deliveryDate" Type="DateTime" />
+    <Property Name="deliveryDate2" Type="DateTime" Nullable="false" />
+    <Property Name="deliverycol1" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="deliverycol2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="deliverycol3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="deliveryparts" Relationship="vbadbModel.deliveryparts_ibfk_1" FromRole="delivery" ToRole="deliverypart" />
+  </EntityType>
+  <EntityContainer Name="vbadbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="deliveries" EntityType="Self.delivery" />
+    <EntitySet Name="employees" EntityType="vbadbModel.employee" />
+    <EntitySet Name="deliveryparts" EntityType="vbadbModel.deliverypart" />
+    <AssociationSet Name="deliveryparts_ibfk_1" Association="vbadbModel.deliveryparts_ibfk_1">
+      <End Role="delivery" EntitySet="deliveries" />
+      <End Role="deliverypart" EntitySet="deliveryparts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int64" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EmpAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="deliverypart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="iddeliveryId" Type="Int32" />
+    <NavigationProperty Name="delivery" Relationship="vbadbModel.deliveryparts_ibfk_1" FromRole="deliverypart" ToRole="delivery" />
+    <Property Name="deliverypartName" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="deliveryparts_ibfk_1">
+    <End Type="vbadbModel.delivery" Role="delivery" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="vbadbModel.deliverypart" Role="deliverypart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="delivery">
+        <PropertyRef Name="iddeliveryId" />
+      </Principal>
+      <Dependent Role="deliverypart">
+        <PropertyRef Name="iddeliveryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

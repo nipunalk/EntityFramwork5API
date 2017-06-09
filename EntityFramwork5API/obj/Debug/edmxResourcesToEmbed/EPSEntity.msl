@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="vbadbModelStoreContainer" CdmEntityContainer="vbadbEntities">
+    <EntitySetMapping Name="deliveries">
+      <EntityTypeMapping TypeName="vbadbModel.delivery">
+        <MappingFragment StoreEntitySet="delivery">
+          <ScalarProperty Name="deliverycol3" ColumnName="deliverycol3" />
+          <ScalarProperty Name="deliverycol2" ColumnName="deliverycol2" />
+          <ScalarProperty Name="deliverycol1" ColumnName="deliverycol1" />
+          <ScalarProperty Name="deliveryDate2" ColumnName="deliveryDate2" />
+          <ScalarProperty Name="deliveryDate" ColumnName="deliveryDate" />
+          <ScalarProperty Name="iddeliveryId" ColumnName="iddeliveryId" />
+          <ScalarProperty Name="deliverycol" ColumnName="deliverycol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employees">
+      <EntityTypeMapping TypeName="vbadbModel.employee">
+        <MappingFragment StoreEntitySet="employee">
+          <ScalarProperty Name="EmpAddress" ColumnName="EmpAddress" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deliveryparts">
+      <EntityTypeMapping TypeName="vbadbModel.deliverypart">
+        <MappingFragment StoreEntitySet="deliveryparts">
+          <ScalarProperty Name="deliverypartName" ColumnName="deliverypartName" />
+          <ScalarProperty Name="iddeliveryId" ColumnName="iddeliveryId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

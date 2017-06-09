@@ -1,0 +1,14 @@
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\ConsoleApplication1.exe.config
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\EntityFramwork5API.dll
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\MySql.Data.dll
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\MySql.Data.Entity.dll
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\System.Data.dll
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\EntityFramework.dll
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\EntityFramwork5API.pdb
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\MySql.Data.xml
+C:\Project\EntityFramwork5API\ConsoleApplication1\bin\Release\EntityFramework.xml
+C:\Project\EntityFramwork5API\ConsoleApplication1\obj\Release\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Project\EntityFramwork5API\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
+C:\Project\EntityFramwork5API\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb

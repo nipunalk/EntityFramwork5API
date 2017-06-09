@@ -1,0 +1,12 @@
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\EntityFramwork5API.dll.config
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\EntityFramwork5API.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\EntityFramwork5API.pdb
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\EntityFramwork5API.tlb
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\EntityFramework.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\MySql.Data.Entity.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\System.Data.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\System.Data.Entity.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\VBACollection.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\bin\Release\EntityFramework.xml
+C:\Project\EntityFramwork5API\EntityFramwork5API\obj\Release\EntityFramwork5API.dll
+C:\Project\EntityFramwork5API\EntityFramwork5API\obj\Release\EntityFramwork5API.pdb
